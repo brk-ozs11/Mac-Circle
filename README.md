@@ -3,10 +3,7 @@
 
 <img src="/images/512-mac.png" alt="App Icon" width="64" height="64">
 
-
-
 Touch on the Power
-
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub watchers](https://img.shields.io/github/watchers/brk-ozs11/Mac-Circle)
@@ -19,34 +16,24 @@ Mac Circle is a macOS app developed with SwiftUI
 
 ## Overview
 
-### Highlights
-
-The main view provides essential information about your Mac's battery, including:
-
-- Temperature: in Celsius
-- Time Remaining: time to fully charge or time to run out
-- Adapter Detail: important information about the power adapter
-- Battery: remaining percentage
-- Cycle Count: maximum cycle count for a battery life is 1000
-- Battery Health
-
-When your Mac starts or stops charging, the Highlights view will show or hide adapter details with smooth animations.
-
-### Screen Saver
-
-A visually appealing view with 100 blocks representing the current battery capacity.
-
-### Row Data
-
-This view displays all data from IOPSCopyPowerSourcesInfo and AppleSmartBattery without any transformation. It also supports searching, highlighting search results in green.
-
 ### Menu Bar Extra
 
-The MenuBarExtra will always appear on the top right of your Mac's menu bar, providing quick access to Mac Battery Inspector, unless the app is quit.
+- Battery Percentage
+- Low Power Mode
+- Battery Health
+- Time Remaining
+- Temperature
+- Battery Cyle
+- Battery Capacity
+- Power Source State
+- Charger Status
+- Charger Informations
+- Battery Power
+  
 
 ### Dark Mode
 
-Mac Battery Inspector supports dark mode. Users can select the mode in the top-right corner of the toolbar to follow the system's preference or their own preference.
+Mac Circle supports dark mode.
 
 ## License
 
@@ -54,6 +41,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Note**: Replace `your-username` with your actual GitHub username in the badge links.
+**Note**: Replace `brk-ozs11` with your actual GitHub username in the badge links.
 
 ![App Screenshot](screenshot.png)
