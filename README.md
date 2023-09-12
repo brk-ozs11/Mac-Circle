@@ -1,7 +1,7 @@
 # Mac Circle
 
 
-![App Icon](/images/app-icon.png)
+![App Icon](/images/circle.jpg)
 
 
 Touch on the Power
