@@ -1,7 +1,7 @@
 # Mac Circle
 
 
-<img src="/images/circle.jpg" alt="App Icon" width="64" height="64">
+<img src="/images/512-mac.png" alt="App Icon" width="64" height="64">
 
 
 
