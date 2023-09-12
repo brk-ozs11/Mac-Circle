@@ -1,5 +1,9 @@
 # Mac Circle
 
+
+![App Icon](/images/app-icon.png)
+
+
 Touch on the Power
 
 
