@@ -3,10 +3,10 @@
 
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-![GitHub watchers](https://img.shields.io/github/watchers/your-username/mac-battery-inspector.svg)
-![GitHub stars](https://img.shields.io/github/stars/brk-ozs11/mac-battery-inspector.svg)
-![GitHub forks](https://img.shields.io/github/forks/brk-ozs11/mac-battery-inspector.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/brk-ozs11/mac-battery-inspector.svg)
+![GitHub watchers](https://img.shields.io/github/watchers/your-username/Mac-Circle)
+![GitHub stars](https://img.shields.io/github/stars/brk-ozs11/Mac-Circle)
+![GitHub forks](https://img.shields.io/github/forks/brk-ozs11/Mac-Circle)
+![GitHub repo size](https://img.shields.io/github/repo-size/brk-ozs11/Mac-Circle)
 
 Mac Battery Inspector is a macOS app developed with SwiftUI in MVVM that allows you to inspect various aspects of your Mac's battery information.
 
