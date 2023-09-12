@@ -1,7 +1,8 @@
 # Mac Circle
 
 
-![App Icon](/images/circle.jpg)
+<img src="/images/circle.jpg" alt="App Icon" width="64" height="64">
+
 
 
 Touch on the Power
