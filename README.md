@@ -1,5 +1,7 @@
 # Mac Circle
 
+Touch on the Power
+
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub watchers](https://img.shields.io/github/watchers/brk-ozs11/Mac-Circle)
@@ -8,8 +10,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/brk-ozs11/Mac-Circle)
 
 
-
-Mac Battery Inspector is a macOS app developed with SwiftUI in MVVM that allows you to inspect various aspects of your Mac's battery information.
+Mac Circle is a macOS app developed with SwiftUI 
 
 ## Overview
 
