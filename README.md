@@ -3,7 +3,8 @@
 
 <img src="/images/512-mac.png" alt="App Icon" width="64" height="64">
 
-Touch on the Power
+**Touch on the Power**
+
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub watchers](https://img.shields.io/github/watchers/brk-ozs11/Mac-Circle)
