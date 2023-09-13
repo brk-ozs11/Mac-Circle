@@ -44,4 +44,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Note**: Replace `brk-ozs11` with your actual GitHub username in the badge links.
 
-![App Screenshot](images/screenShot1.png)
+![App Screenshot](images/ScreenShot1.jpg)
