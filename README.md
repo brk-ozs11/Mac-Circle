@@ -39,6 +39,10 @@ Mac Circle supports dark mode.
 
 ![App Screenshot](images/ScreenShot2.jpg)
 
+---
+
+
+![App video](images/main.mov)
 
 ## Installation
 
