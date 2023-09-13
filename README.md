@@ -30,6 +30,7 @@ Mac Circle is a macOS app developed with SwiftUI
 - Charger Status
 - Charger Informations
 - Battery Power
+
   
 
 ![App Screenshot](images/ScreenShot1.jpg)
