@@ -19,7 +19,7 @@ Mac Circle is a macOS app developed with SwiftUI.
 - Battery Health
 - Time Remaining
 - Temperature
-- Battery Cyle
+- Battery Cycle
 - Battery Capacity
 - Power Source State
 - Charger Status
