@@ -1,10 +1,8 @@
-# Mac Circle
-
+# **Mac Circle**
 
 <img src="/images/512-mac.png" alt="App Icon" width="64" height="64">
 
 **Touch on the Power**
-
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub watchers](https://img.shields.io/github/watchers/brk-ozs11/Mac-Circle)
@@ -12,8 +10,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/brk-ozs11/Mac-Circle)
 ![GitHub repo size](https://img.shields.io/github/repo-size/brk-ozs11/Mac-Circle)
 
-
-Mac Circle is a macOS app developed with SwiftUI 
+Mac Circle is a macOS app developed with SwiftUI.
 
 ## Overview
 
@@ -31,12 +28,9 @@ Mac Circle is a macOS app developed with SwiftUI
 - Charger Informations
 - Battery Power
 
-  
-
 ![App Screenshot](images/ScreenShot1.jpg)
 
 ---
-
 
 ### Dark Mode
 
@@ -44,10 +38,9 @@ Mac Circle supports dark mode.
 
 ![App Screenshot](images/ScreenShot2.jpg)
 
-
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+Last Updated: September 12, 2023
+
