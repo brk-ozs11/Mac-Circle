@@ -28,9 +28,15 @@ Mac Circle is a macOS app developed with SwiftUI.
 - Charger Informations
 - Battery Power
 
-![App Screenshot](images/ScreenShot1.jpg)
+### Charge Animation
+
+![App video](images/main.mov)
 
 ---
+
+![App Screenshot](images/ScreenShot1.jpg)
+
+
 
 ### Dark Mode
 
@@ -42,7 +48,7 @@ Mac Circle supports dark mode.
 ---
 
 
-![App video](images/main.mov)
+
 
 ## Installation
 
