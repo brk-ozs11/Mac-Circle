@@ -66,6 +66,7 @@ That's it! You can now launch Mac Circle from your Applications folder.
 
 [![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg)](https://www.buymeacoffee.com/berkozus117)
 
+[![QR Code](images/bmc_qr.png)](https://www.buymeacoffee.com/berkozus117)
 
 
 ## License
