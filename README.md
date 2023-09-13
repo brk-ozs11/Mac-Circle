@@ -36,6 +36,19 @@ Mac Circle is a macOS app developed with SwiftUI.
 
 Mac Circle supports dark mode.
 
+
+## Installation
+
+To install Mac Circle, follow these steps:
+
+1. [Download the latest release](https://github.com/brk-ozs11/Mac-Circle/releases/latest) of Mac Circle.
+2. Once downloaded, locate the `.app` file in your Downloads folder.
+3. Drag the `.app` file into your Applications folder to install it.
+
+That's it! You can now launch Mac Circle from your Applications folder.
+
+
+
 ![App Screenshot](images/ScreenShot2.jpg)
 
 ## License
