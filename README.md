@@ -32,16 +32,16 @@ Mac Circle is a macOS app developed with SwiftUI
 - Battery Power
   
 
+![App Screenshot](images/ScreenShot1.jpg)
+
+---
+
+
 ### Dark Mode
 
 Mac Circle supports dark mode.
 
 ![App Screenshot](images/ScreenShot2.jpg)
-
----
-
-![App Screenshot](images/ScreenShot1.jpg)
-
 
 
 
