@@ -64,6 +64,8 @@ To install Mac Circle, follow these steps:
 That's it! You can now launch Mac Circle from your Applications folder.
 
 
+## Support
+
 [![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg)](https://www.buymeacoffee.com/berkozus117)
 
 <img src="images/bmc_qr.png" alt="QR Code" width="100">
