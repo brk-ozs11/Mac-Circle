@@ -6,7 +6,7 @@
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<img src="{[https://img.shields.io/badge/license-MIT-blue.svg](https://img.shields.io/badge/license-MIT-blue.svg](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)}" />
+![image]({https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white})
 
 
 Mac Circle is a macOS app developed with SwiftUI.
