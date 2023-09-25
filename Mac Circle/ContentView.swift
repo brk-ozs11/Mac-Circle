@@ -15,6 +15,11 @@ struct contentView: View {
     @State private var scale: CGFloat = 1.0
     private let scaleValues: [CGFloat] = [0.4, 0.7]
     
+    @State private var isPopoverVisible = false
+    @State private var isPopoverVisible1 = false
+   
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
         
         VStack {
@@ -55,7 +60,7 @@ struct contentView: View {
                                 
                             }
                             
-                        }.frame(width: 140, height: 100) // percentage frame
+                        }.frame(width: 140, height: 100)
                         
 
                         Divider().frame(height: 110)
@@ -107,6 +112,57 @@ struct contentView: View {
                         
                         VStack {
                             
+                            Image(systemName: "info.circle.fill")
+                                .onTapGesture {
+                                    isPopoverVisible1.toggle()
+                                }
+                                .popover(isPresented: $isPopoverVisible1, attachmentAnchor: .rect(.bounds), arrowEdge: .top) {
+                                    
+                                    VStack {
+                                        
+                                            
+                                            HStack {
+                                                
+                                                Image(systemName: "checkmark.circle.fill")
+                                                Text("Good")
+                                                    .frame(width: 40, height: 20)
+                                                Spacer().frame(width: 10)
+                                            }
+                                            
+                                            Text("Good Performance Battery")
+                                                .frame(width: 170, height: 13)
+                                                .foregroundColor(.blue)
+                                            Spacer().frame(height: 15)
+                                            
+                                            HStack {
+                                                Image(systemName: "exclamationmark.circle.fill")
+                                                Text("Fair")
+                                                    .frame(width: 40, height: 20)
+                                                Spacer().frame(width: 10)
+                                            }
+                                            
+                                            Text("Limited Capacity Battery")
+                                                .frame(width: 150, height: 20)
+                                                .foregroundColor(.blue)
+                                            
+                                            Spacer().frame(height: 15)
+                                        
+                                            HStack {
+                                                Image(systemName: "xmark.circle.fill")
+                                                Text("Poor")
+                                                    .frame(width: 40, height: 20)
+                                                Spacer().frame(width: 10)
+                                            }
+                                            Text("Battery That Cannot Provide Power")
+                                                .frame(width: 220, height: 20)
+                                                .foregroundColor(.blue)
+                                        
+                                    }.frame(width: 230, height: 180)
+                                }
+                            
+                            Spacer().frame(height: 10)
+                            
+                            
                             Image(systemName: "heart.fill")
                             
                             Text("Battery Health")
@@ -119,6 +175,8 @@ struct contentView: View {
                                     .foregroundColor(.blue)
                                 
                             }
+                            
+                            Spacer().frame(height: 20)
                             
                         }.frame(width: 140, height: 100)
                         
@@ -141,13 +199,29 @@ struct contentView: View {
                                 Text("Time Remaining")
                                 
                             }.frame(width: 70)
-                            
-                            Gauge(value: Double(timeRemaining), in: 0...2000) {
-                                Text("\(timeRemaining) min")
-                            }.gaugeStyle(.accessoryCircularCapacity)
-                                .tint(.blue)
-                                .scaleEffect(1)
-                                .frame(width: 50, height: 50)
+
+                            if timeRemaining >= 2000 {
+                                Text("Calculating")
+                                    .frame(width: 70)
+                                    .foregroundColor(.blue)
+                            } else {
+                                
+                                
+                                let hours = timeRemaining / 60
+                                let minutes = timeRemaining % 60
+                                
+                                // Sonucu ekrana yazdır
+                                if hours > 0 {
+                                    Text("\(hours) h : \(minutes) m")
+                                        .frame(width: 75, height: 20)
+                                        .foregroundColor(.blue)
+                                } else {
+                                    Text("\(minutes) m")
+                                        .frame(width: 75, height: 20)
+                                        .foregroundColor(.blue)
+                                }
+                                
+                            }
                             
                         }
                         
@@ -172,20 +246,134 @@ struct contentView: View {
                                 
                                 VStack {
                                     
+                                    Image(systemName: "info.circle.fill")
+                                        .onTapGesture {
+                                            isPopoverVisible.toggle()
+                                        }
+                                        .popover(isPresented: $isPopoverVisible, attachmentAnchor: .rect(.bounds), arrowEdge: .top) {
+                                            
+                                            VStack {
+                                                
+                                                HStack {
+                                                    
+                                                    Image(systemName: "snow")
+                                                    Text("Below 10°C / 50°F")
+                                                        .frame(width: 120, height: 20)
+                                                    
+                                                }
+                                                
+                                                Text("Low Temperature")
+                                                    .frame(width: 130, height: 10)
+                                                    .foregroundColor(.blue)
+                                                
+                                                Spacer().frame(height: 15)
+                                                
+                                                HStack {
+                                                    
+                                                    Image(systemName: "checkmark.circle.fill")
+                                                    
+                                                    Text("10-35°C / 50-95°F")
+                                                        .frame(width: 120, height: 20)
+                                                    
+                                                }
+                                                
+                                                Text("Perfect Temperature")
+                                                    .frame(width: 130, height: 10)
+                                                    .foregroundColor(.blue)
+                                                
+                                                Spacer().frame(height: 15)
+                                                
+                                                HStack {
+                                                    
+                                                    Image(systemName: "flame.fill")
+                                                    Text("Above 35°C / 95°F")
+                                                        .frame(width: 120, height: 20)
+                                                    
+                                                }
+                                                Text("High Temperature")
+                                                    .frame(width: 130, height: 10)
+                                                    .foregroundColor(.blue)
+                                                
+                                                HStack {
+                                                    
+                                                    Spacer().frame(width: 150, height: 30)
+                                                    
+                                                    VStack {
+                                                        
+                                                        Spacer().frame(height: 20)
+                                                        
+                                                        Button("Learn More") {
+                                                            openURL(URL(string: "https://www.apple.com/batteries/maximizing-performance/")!)
+                                                            
+                                                        }.frame(width: 70, height: 15)
+                                                            .font(.system(size: 10))
+                                                            .controlSize(.mini)
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }.frame(width: 230, height: 180)
+                                        }
+                                
+                                    
+                                    
+                                    Spacer().frame(height: 4)
+                                    
                                     Image(systemName: "thermometer.medium")
                                     
                                     Text("Temperature")
                                     
+                                    Spacer().frame(height: 10)
+                                    
+                                    VStack {
+                                        
+                                        if Double(formattedTemperature) ?? 0 < 10.00 {
+                                            
+                                            Text("Low Temperature")
+                                                .foregroundColor(.blue)
+                                            
+                                            
+                                        } else if Double(formattedTemperature) ?? 0 <= 35.00 {
+                                            
+                                            Text("Perfect Temperature")
+                                                .frame(width: 80, height: 32)
+                                                .foregroundColor(.blue)
+                                            
+                                        } else {
+                                            
+                                            Text("High Temperature")
+                                                .foregroundColor(.blue)
+                                            
+                                        }
+                                    }.frame(width: 90)
+                                    
+                                    Spacer().frame(height: 10)
+                                    
                                 }.frame(width: 80)
                                 
-                                Gauge(value: Double(formattedTemperature)!, in: 0...40) {
-                                    Text("\(formattedTemperature) ◦C")
-                                }.gaugeStyle(.accessoryCircularCapacity)
-                                    .tint(.blue)
-                                    .scaleEffect(1)
-                                    .frame(width: 50, height: 50)
-                                
+                                VStack {
+                                    
+                                    Spacer().frame(height: 10)
+                                    
+                                    Gauge(value: Double(formattedTemperature)!, in: 0...40) {
+                                        
+                                        Text("\(formattedTemperature) ◦C")
+                                        
+                                    }.gaugeStyle(.accessoryCircularCapacity)
+                                        .tint(.blue)
+                                        .scaleEffect(1)
+                                        .frame(width: 50, height: 50)
+                                    
+                                    Spacer().frame(height: 10)
+
+                                    let fahrenheit = (Double(formattedTemperature) ?? 0) * 1.8 + 32
+                                    let formattedFahrenheit = String(format: "%0.2f °F", fahrenheit)
+                                    Text(formattedFahrenheit)
+                                        .frame(width: 70)
+
+                                }
                             }
+                            
                         }.frame(width: 140, height: 100)
                         
                         
@@ -217,6 +405,7 @@ struct contentView: View {
                                     
                                     Gauge(value: Double(batteryCycle), in: 0...Double(designCycle)) {
                                         Text("\(batteryCycle)")
+                                            .font(.system(size: 17))
                                     }.gaugeStyle(.accessoryCircularCapacity)
                                         .tint(.blue)
                                         .scaleEffect(1)
@@ -244,7 +433,7 @@ struct contentView: View {
                         
                     }
                     
-                }.frame(width: 1000, height: 100) // HStack frame
+                }.frame(width: 1000, height: 100)
                 
                 Spacer(minLength: -20)
                 
@@ -306,7 +495,7 @@ struct contentView: View {
                                         
                                     }
                                     
-                                }.frame(width: 200, height: 100) // percentage frame
+                                }.frame(width: 200, height: 100)
                                 
                                 Spacer().frame(width: 10)
                                 
@@ -336,6 +525,11 @@ struct contentView: View {
                                                         
                                                         Text("Power Source State")
                                                         
+                                                        Spacer().frame(height: 15)
+                                                        
+                                                        Image(systemName: "rays")
+                                                            .frame(width: 5, height: 5)
+                                                        
                                                         Spacer().frame(height: 20)
                                                         
                                                         Text("\(powerSourceState)")
@@ -354,13 +548,10 @@ struct contentView: View {
                                                 
                                         
                                                 VStack {
-                                                    
-                                                    Image(systemName: "cable.connector")
-                                                
-                                                    Text("Charger")
+                                                       
                                                     Spacer().frame(height: 10)
                                                     if isCharging  {
-                                                        Text("Connected")
+                                                        Text("Charging")
                                                             .foregroundColor(.blue)
                                                         
                                                         Spacer().frame(height: 4)
@@ -381,7 +572,7 @@ struct contentView: View {
                                                         
                                                     } else {
                                                         
-                                                        Text("Disconnected")
+                                                        Text("Not Charging")
                                                             .foregroundColor(.blue)
                                                         
                                                         Spacer().frame(height: 4)
@@ -391,6 +582,23 @@ struct contentView: View {
 
                                                     }
                                                     
+                                                    if let fullyCharged = batteryHelper.fullyCharged {
+                                                        
+                                                        if fullyCharged == 1 {
+                                                            
+                                                            VStack {
+                                                                
+                                                                Image(systemName: "battery.100")
+                                                                Text("Fully Charged")
+                                                                    .frame(width: 90, height: 15)
+                                                                    .foregroundColor(.blue)
+                                                                
+                                                            }.frame(width: 50, height: 50)
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                
                                                 }
                                                 
                                                 
@@ -408,11 +616,27 @@ struct contentView: View {
                                                                    adapterDetails.count > 0,
                                                                    let adapterDetailsDic = adapterDetails[0] as? Dictionary<String, Any> {
                                                                     
+                                                                    
                                                                     if let manufacturer = adapterDetailsDic["Manufacturer"] as? String {
                                                                         HStack {
+                                                                            
+                                                                            VStack {
+                                                                                
+                                                                                Spacer().frame(height: 8)
+                                                                                    
+                                                                                
+                                                                                Image(systemName: "cable.connector")
+                                                                                
+                                                                            }
+                                                                            
+                                                                            Spacer().frame(width: 50)
+                                                                                
+                                                                            
                                                                             Text("Manufacturer:")
                                                                             Text(manufacturer)
                                                                                 .foregroundColor(.blue)
+                                                                            
+                                                                            Spacer().frame(width: 60)
                                                                         }
                                                                     }
                                                                     
@@ -426,6 +650,8 @@ struct contentView: View {
                                                                         }
                                                                     }
                                                                     
+                                                                    Spacer().frame(height: 4)
+                                                                    
                                                                     if let description = adapterDetailsDic["Description"] as? String {
                                                                         HStack {
                                                                             Text("Description:")
@@ -433,6 +659,8 @@ struct contentView: View {
                                                                                 .foregroundColor(.blue)
                                                                         }
                                                                     }
+                                                                    
+                                                                    Spacer().frame(height: 4)
                                                                     
                                                                     if let watts = adapterDetailsDic["Watts"] as? Int {
                                                                         HStack {
@@ -442,22 +670,56 @@ struct contentView: View {
                                                                         }
                                                                     }
                                                                     
+                                                                    Spacer().frame(height: 4)
+                                                                    
                                                                     HStack {
                                                                         if let isWireless = adapterDetailsDic["IsWireless"] as? Int, isWireless == 1 {
                                                                             Text("Is Wireless:")
-                                                                                .bold()
                                                                             Text("True")
                                                                                 .foregroundColor(.blue)
                                                                         } else {
                                                                             Text("Is Wireless:")
-                                                                                .bold()
                                                                             Text("False")
                                                                                 .foregroundColor(.blue)
                                                                         }
                                                                     }
+                                                                    
+                                                                    HStack {
+                                                                        
+                                                                        if let timeToFullCharge = powerSources.powerSource.first(where: { $0.key == "Time to Full Charge" })?.value as? Int {
+                                                                            
+                                                                            let hours = timeToFullCharge / 60
+                                                                            let minutes = timeToFullCharge % 60
+                                                                            
+                                                                            if timeToFullCharge != -1 {
+                                                                                
+                                                                                if hours > 0 {
+                                                                                    Text("Time to Full Charge:")
+                                                                                    Text("\(hours) h : \(minutes) m")
+                                                                                        .frame(width: 65, height: 20)
+                                                                                        .foregroundColor(.blue)
+                                                                                } else {
+                                                                                    Text("Time to Full Charge:")
+                                                                                    Text("\(minutes) m")
+                                                                                        .frame(width: 65, height: 20)
+                                                                                        .foregroundColor(.blue)
+                                                                                }
+                                                                                
+                                                                            } else {
+                                                                                Text("Time to Full Charge:")
+                                                                                Text("Calculating")
+                                                                                    .frame(width: 70, height: 10)
+                                                                                    .foregroundColor(.blue)
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    
                                                                 } else {
                                                                     Text("Charger Informations")
                                                                     
+                                                                    Spacer().frame(height: 10)
+                                                                    
+                                                                    Image(systemName: "info.circle.fill")
                                                                 }
                                                             }
                                                             .frame(width: 290, height: 120)
