@@ -40,6 +40,10 @@ Mac Circle supports dark mode.
 
 ---
 
+### Popover Informations
+
+
+![App video](images/Popover.mov)
 
 
 
