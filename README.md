@@ -12,6 +12,8 @@ Mac Circle is a macOS app developed with SwiftUI.
 
 ## Overview
 
+![Images](images/MacCircle-Grid-Schema.jpeg)
+
 ### Menu Bar Extra
 
 - Battery Percentage
