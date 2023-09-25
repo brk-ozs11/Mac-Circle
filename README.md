@@ -70,5 +70,5 @@ That's it! You can now launch Mac Circle from your Applications folder.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Last Updated: September 13, 2023
+Last Updated: September 25, 2023
 
