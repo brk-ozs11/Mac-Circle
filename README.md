@@ -35,7 +35,7 @@ Mac Circle is a macOS app developed with SwiftUI.
 
 ### Light Mode
 
-![App Screenshot](images/ScreenShot1.jpg)
+![App Screenshot](images/lightMode.jpg)
 
 
 
@@ -44,7 +44,7 @@ Mac Circle is a macOS app developed with SwiftUI.
 Mac Circle supports dark mode.
 
 
-![App Screenshot](images/ScreenShot2.jpg)
+![App Screenshot](images/darkMode.jpg)
 
 ---
 
