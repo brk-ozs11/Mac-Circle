@@ -28,7 +28,7 @@ Mac Circle is a macOS app developed with SwiftUI.
 
 ### Charge Animation
 
-![App video](images/main.mov)
+![App video](images/Ekran Kaydı 2023-09-25 21.21.11.mov)
 
 ---
 
