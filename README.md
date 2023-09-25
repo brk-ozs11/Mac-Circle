@@ -12,21 +12,11 @@ Mac Circle is a macOS app developed with SwiftUI.
 
 ## Overview
 
-![Images](images/MacCircle-Grid-Schema.jpeg)
-
 ### Menu Bar Extra
 
-- Battery Percentage
-- Low Power Mode
-- Battery Health
-- Time Remaining
-- Temperature
-- Battery Cycle
-- Battery Capacity
-- Power Source State
-- Charger Status
-- Charger Informations
-- Battery Power
+![Images](images/MacCircle-Grid-Schema.jpeg)
+
+
 
 ### Charge Animation
 
